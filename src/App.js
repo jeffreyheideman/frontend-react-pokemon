@@ -19,7 +19,6 @@ function App() {
                 setPokemonList(response.data.results);
                 setNextLink(response.data.next);
                 setPreviousLink(response.data.previous);
-                setLoading(true)
             } catch (e) {
                 console.error(e);
                 setError(true)
