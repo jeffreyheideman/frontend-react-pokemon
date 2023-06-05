@@ -1,12 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import axios from "axios";
+import PokemonCard from "./components/PokemonCard/PokemonCard";
+
 
 function App() {
-  return (
-    <div>
-      Begin hier met de opdracht!
-    </div>
-  );
+
+
+
+    return (
+        <>
+            <div>
+            <PokemonCard pokemonName="ditto"/>
+            <PokemonCard pokemonName="jigglypuff"/>
+            </div>
+        </>
+    )
+
+
 }
 
 export default App;
