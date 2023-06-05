@@ -9,7 +9,7 @@ const PokemonCard = ({pokemonName}) => {
         async function getPokemonData() {
             try {
                 const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-                console.log(response.data)
+                // console.log(response.data)
                 setPokemon(response.data)
             } catch (e) {
                 console.error(e)
@@ -29,8 +29,8 @@ const PokemonCard = ({pokemonName}) => {
                         <p>Weight: {pokemon.weight}</p>
 
                         <ul>
-                            {pokemon.abilities.map((ability) => {
-                                return <li>{ability.ability.name}</li>
+                            {pokemon.abilities.map((newAbilityArray) => {
+                                return <li key={newAbilityArray.ability.slot}>{newAbilityArray.ability.name}</li>
                             })}
                         </ul>
 
